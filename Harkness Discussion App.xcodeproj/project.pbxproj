@@ -24,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA49452A2E9F321A00FE2699 /* FastDraw.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FastDraw.xcodeproj; path = "../FastDraw-master/FastDraw/FastDraw.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		BAF986152E605EE00096930E /* Harkness Discussion App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Harkness Discussion App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF9862B2E605EE30096930E /* Harkness Discussion AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Harkness Discussion AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF986352E605EE30096930E /* Harkness Discussion AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Harkness Discussion AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,12 +86,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA13D6192E67F8840021F537 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA49452A2E9F321A00FE2699 /* FastDraw.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA49452D2E9F321A00FE2699 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BAF9860C2E605EE00096930E = {
 			isa = PBXGroup;
 			children = (
 				BAF986172E605EE00096930E /* Harkness Discussion App */,
 				BAF9862E2E605EE30096930E /* Harkness Discussion AppTests */,
 				BAF986382E605EE30096930E /* Harkness Discussion AppUITests */,
+				BA13D6192E67F8840021F537 /* Frameworks */,
 				BAF986162E605EE00096930E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -208,9 +225,18 @@
 			);
 			mainGroup = BAF9860C2E605EE00096930E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BA4945292E9F2AF600FE2699 /* XCRemoteSwiftPackageReference "FastDraw" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BAF986162E605EE00096930E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BA49452D2E9F321A00FE2699 /* Products */;
+					ProjectRef = BA49452A2E9F321A00FE2699 /* FastDraw.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BAF986142E605EE00096930E /* Harkness Discussion App */,
@@ -285,7 +311,6 @@
 		BAF9863F2E605EE30096930E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -312,7 +337,6 @@
 		BAF986402E605EE30096930E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -563,6 +587,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA4945292E9F2AF600FE2699 /* XCRemoteSwiftPackageReference "FastDraw" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/collinzrj/FastDraw";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = BAF9860D2E605EE00096930E /* Project object */;
 }
