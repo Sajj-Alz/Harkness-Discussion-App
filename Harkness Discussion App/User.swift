@@ -9,14 +9,20 @@ import Foundation
 
 class User{ //this is the teacher
     private var accountType:String //guest or permanent
-    private var discussions:[Discussion]?
-    private var email:String?
-    private var password:String? // if user is guest
+    private var discussions:[Discussion]? // if user is guest there is no assigned value
+    private var email:String? // if user is guest there is no assigned value
+    private var password:String? // if user is guest there is no assigned value
     
     
     init(type:String){
         self.accountType="guest" // If they are guest users
-        self.discussions=[]
+    }
+    
+    init(discussions:[Discussion], email:String, password:String){
+        self.accountType="permanent"
+        self.discussions=discussions
+        self.email=email
+        self.password=password
     }
     
     
@@ -25,10 +31,25 @@ class User{ //this is the teacher
     }
     public func getDiscussions() -> [Discussion]{
         // if there is no list of saved discussions (user is a guest) then the default return will be an empty array
-        return self.discussions ?? []
+        return self.discussions ?? [] // provides a default condition is there is no value for discussions
     }
     public func addDiscussion(_ discussion:Discussion,discussions:[Discussion]){ // makes sure that there is a value for discussions and is an array of Discussion
-         self.discussions.append(discussion) // this should work the exact same way as in the student class need to check why its not working
+         self.discussions.append(discussion)
     }
     
+    public func setEmail(_ email:String){
+        self.email=email
+    }
+    
+    public func getEmail() -> String?{
+        return self.email ?? "" // provides a default condition is there is no value for email
+    }
+    
+    public func getPassword(_ password:String){
+        self.password=password
+    }
+    
+    public func getPassword() -> String?{
+        return self.password ?? "" // provides a default condition is there is no value for email
+    }
 }

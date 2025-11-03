@@ -6,14 +6,12 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
-
+// this is for all the pages on the Main storyboard
+class LogInTabViewController: UIViewController {
+// unsure what to put in here but we'll get to it when we get to it
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
